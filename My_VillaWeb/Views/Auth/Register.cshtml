@@ -1,0 +1,40 @@
+﻿@using My_VillaWeb.Models.Dtos;
+@model RegisterationRequestDTO
+
+<form method="post">
+    <div class="container border p-4">
+        <div class="row text-center">
+            <h1>Đăng ký</h1>
+        </div>
+        <div class="row text-center">
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3 pb-2">
+                <input asp-for="UserName" type="text" class="form-control" placeholder="Tài khoản" />
+            </div>
+
+            <div class="col-6 offset-3 pb-2">
+                <input asp-for="Name" type="text" class="form-control" placeholder="Họ và Tên" />
+            </div>
+
+            <div class="col-6 offset-3 pb-2">
+                <input asp-for="Password" type="text" class="form-control" placeholder="Mật khẩu" />
+            </div>
+
+            <div class="col-6 offset-3 pb-2">
+                <button type="submit" class="form-control btn-success" value="Submit">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
